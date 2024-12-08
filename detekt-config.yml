@@ -1,0 +1,3 @@
+formatting:
+  ParameterListWrapping:
+    indentSize: 4
