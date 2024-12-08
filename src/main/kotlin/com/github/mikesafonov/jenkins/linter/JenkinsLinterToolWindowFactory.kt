@@ -12,7 +12,6 @@ import com.intellij.openapi.wm.ToolWindowType
  */
 
 class JenkinsLinterToolWindowFactory : ToolWindowFactory {
-
     override fun createToolWindowContent(
         project: Project,
         toolWindow: ToolWindow,
