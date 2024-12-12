@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.github.mikesafonov.jenkins-linter-idea-plugin</id>
+    <id>com.github.tobiashorst.jenkins-linter-idea-plugin</id>
     <name>Jenkins Pipeline Linter</name>
     <vendor email="programmierungth@gmx.de" url="https://github.com/TobiasHorst">Tobias Horst</vendor>
 
