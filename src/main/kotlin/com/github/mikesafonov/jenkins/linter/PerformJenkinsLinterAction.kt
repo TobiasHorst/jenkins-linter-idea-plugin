@@ -106,6 +106,7 @@ class PerformJenkinsLinterAction : AnAction() {
                 settings.jenkinsUrl,
                 settings.trustSelfSigned,
                 settings.ignoreCertificate,
+                settings.useTokenAsOAuthToken,
                 settings.useCrumbIssuer,
             )
         linter.use {
