@@ -12,9 +12,13 @@
 
 ### Fixed
 
-- Linting broken when OAuth token usage is enabled
-
 ### Security
+
+## [1.0.1] - 2024-12-12
+
+### Fixed
+
+- Linting broken when OAuth token usage is enabled
 
 ## [1.0.0] - 2024-12-12
 
@@ -37,5 +41,6 @@ Upgrade of plugin dependency versions and add new features of initial [Jenkins L
 - Update org.jlleitschuh.gradle.ktlint Gradle plugin
 - Update io.gitlab.arturbosch.detekt Gradle plugin
 
-[Unreleased]: https://github.com/TobiasHorst/jenkins-linter-idea-plugin/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/TobiasHorst/jenkins-linter-idea-plugin/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/TobiasHorst/jenkins-linter-idea-plugin/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/TobiasHorst/jenkins-linter-idea-plugin/commits/v1.0.0
