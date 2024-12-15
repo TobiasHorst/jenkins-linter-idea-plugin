@@ -183,16 +183,14 @@ jobs:
         run: |
           PROPERTIES="$(./gradlew properties --console=plain -q)"
           PLUGIN_SINCE_BUILD="$(echo "$PROPERTIES" | grep "^pluginSinceBuild:" | base64)"
-          PLUGIN_UNTIL_BUILD="$(echo "$PROPERTIES" | grep "^pluginUntilBuild:" | base64)"
           echo "::set-output name=pluginSinceBuild::$PLUGIN_SINCE_BUILD"
-          echo "::set-output name=pluginUntilBuild::$PLUGIN_UNTIL_BUILD"
           echo "::set-output name=pluginVerifierHomeDir::~/.pluginVerifier"
       # Cache Plugin Verifier IDEs
       - name: Setup Plugin Verifier IDEs Cache
         uses: actions/cache@v4.2.0
         with:
           path: ${{ steps.properties.outputs.pluginVerifierHomeDir }}/ides
-          key: ${{ runner.os }}-plugin-verifier-${{ steps.properties.outputs.pluginSinceBuild }}-${{ steps.properties.outputs.pluginUntilBuild }}
+          key: ${{ runner.os }}-plugin-verifier-${{ steps.properties.outputs.pluginSinceBuild }}
 
       # Run IntelliJ Plugin Verifier action using GitHub Action
       - name: Verify Plugin
