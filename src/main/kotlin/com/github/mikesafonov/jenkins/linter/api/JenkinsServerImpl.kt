@@ -38,19 +38,18 @@ class JenkinsServerImpl(
             httpClient,
         )
 
-    override fun checkConnection(): JenkinsResponse {
-        return httpClient.execute(HttpGet(url)).use {
+    override fun checkConnection(): JenkinsResponse =
+        httpClient.execute(HttpGet(url)).use {
             val code = it.statusLine.statusCode
             JenkinsResponse(code)
         }
-    }
 
     override fun close() {
         httpClient.close()
     }
 
-    override fun lint(content: String): LinterResponse {
-        return try {
+    override fun lint(content: String): LinterResponse =
+        try {
             val postMethod = buildPost(content)
             httpClient.execute(postMethod).use {
                 val response = EntityUtils.toString(it.entity, StandardCharsets.UTF_8)
@@ -60,7 +59,6 @@ class JenkinsServerImpl(
             Logger.getInstance(JenkinsServerImpl::class.java).debug(ex)
             LinterResponse(ex.statusCode, ex.message ?: ex.cause?.message ?: "")
         }
-    }
 
     private fun buildPost(fileContent: String): HttpPost {
         val postMethod = HttpPost("$url/pipeline-model-converter/validate")
@@ -71,7 +69,8 @@ class JenkinsServerImpl(
         }
 
         postMethod.entity =
-            MultipartEntityBuilder.create()
+            MultipartEntityBuilder
+                .create()
                 .addTextBody("jenkinsfile", fileContent)
                 .build()
         return postMethod

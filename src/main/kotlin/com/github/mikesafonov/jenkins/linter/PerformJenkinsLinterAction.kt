@@ -37,7 +37,8 @@ class PerformJenkinsLinterAction : AnAction() {
                     "Please configure Jenkins instance under Settings | Tools | Jenkins Linter",
                 )
             } else {
-                ProgressManager.getInstance()
+                ProgressManager
+                    .getInstance()
                     .run(
                         object : Backgroundable(project, "Linting ${fileContent.name} ...", false) {
                             override fun run(indicator: ProgressIndicator) {
@@ -93,9 +94,7 @@ class PerformJenkinsLinterAction : AnAction() {
         e.presentation.isEnabledAndVisible = virtualFile != null && !virtualFile.isDirectory
     }
 
-    override fun getActionUpdateThread(): ActionUpdateThread {
-        return ActionUpdateThread.BGT
-    }
+    override fun getActionUpdateThread(): ActionUpdateThread = ActionUpdateThread.BGT
 
     private fun doLint(
         content: String,

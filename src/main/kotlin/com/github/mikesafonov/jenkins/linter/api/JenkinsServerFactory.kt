@@ -32,7 +32,5 @@ object JenkinsServerFactory {
         ignoreCertificate: Boolean = false,
         credentials: Credentials?,
         useTokenAsOAuthToken: Boolean,
-    ): JenkinsServer {
-        return JenkinsServerImpl(url, trustSelfSigned, ignoreCertificate, credentials, useTokenAsOAuthToken)
-    }
+    ): JenkinsServer = JenkinsServerImpl(url, trustSelfSigned, ignoreCertificate, credentials, useTokenAsOAuthToken)
 }

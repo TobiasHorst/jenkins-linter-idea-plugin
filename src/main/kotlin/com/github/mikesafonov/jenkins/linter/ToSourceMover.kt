@@ -8,7 +8,9 @@ import com.intellij.openapi.project.Project
 /**
  * @author Mike Safonov
  */
-class ToSourceMover(private val project: Project) {
+class ToSourceMover(
+    private val project: Project,
+) {
     fun move(data: ScriptErrorData) {
         val descriptor = OpenFileDescriptor(project, data.file)
         val editor = FileEditorManager.getInstance(project).openTextEditor(descriptor, true)!!

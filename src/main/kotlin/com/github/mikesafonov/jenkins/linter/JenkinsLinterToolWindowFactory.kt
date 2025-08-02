@@ -29,9 +29,7 @@ class JenkinsLinterToolWindowFactory : ToolWindowFactory {
     }
 }
 
-fun getLinterToolWindow(project: Project): ToolWindow {
-    return ToolWindowManager.getInstance(project).getToolWindow("Jenkins Linter")!!
-}
+fun getLinterToolWindow(project: Project): ToolWindow = ToolWindowManager.getInstance(project).getToolWindow("Jenkins Linter")!!
 
 fun getPanel(project: Project): LinterResponsePanel {
     val content = getLinterToolWindow(project).contentManager.getContent(0)!!

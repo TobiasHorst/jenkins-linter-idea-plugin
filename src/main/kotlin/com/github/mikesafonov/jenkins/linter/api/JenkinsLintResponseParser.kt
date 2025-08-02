@@ -9,11 +9,12 @@ import java.util.regex.Pattern
 class JenkinsLintResponseParser {
     private val errorPattern: Pattern = Pattern.compile("@ line ([0-9]+), column ([0-9]+)")
 
-    fun parse(content: String): List<ScriptError> {
-        return content.lines().mapNotNull {
-            toScriptError(it)
-        }.asReversed()
-    }
+    fun parse(content: String): List<ScriptError> =
+        content
+            .lines()
+            .mapNotNull {
+                toScriptError(it)
+            }.asReversed()
 
     private fun toScriptError(line: String): ScriptError? {
         val matcher = errorPattern.matcher(line)
