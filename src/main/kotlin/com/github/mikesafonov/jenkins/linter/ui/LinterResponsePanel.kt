@@ -15,7 +15,9 @@ import java.awt.event.MouseEvent
  * @author Mike Safonov
  */
 
-class LinterResponsePanel(val mover: ToSourceMover) : JBPanelWithEmptyText() {
+class LinterResponsePanel(
+    val mover: ToSourceMover,
+) : JBPanelWithEmptyText() {
     init {
         this.layout = BorderLayout()
     }

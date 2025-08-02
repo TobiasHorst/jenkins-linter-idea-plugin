@@ -61,14 +61,10 @@ class JenkinsLinterConfigurable : SearchableConfigurable {
     }
 
     @Nls(capitalization = Nls.Capitalization.Title)
-    override fun getDisplayName(): String {
-        return "Jenkins Linter"
-    }
+    override fun getDisplayName(): String = "Jenkins Linter"
 
     @Nls(capitalization = Nls.Capitalization.Title)
-    override fun getId(): String {
-        return "Jenkins Linter"
-    }
+    override fun getId(): String = "Jenkins Linter"
 
     override fun reset() {
         val settings = getSettings()
@@ -80,7 +76,5 @@ class JenkinsLinterConfigurable : SearchableConfigurable {
         component.credentials = JenkinsLinterCredentials.get()
     }
 
-    private fun getSettings(): JenkinsLinterState {
-        return JenkinsLinterState.getInstance()
-    }
+    private fun getSettings(): JenkinsLinterState = JenkinsLinterState.getInstance()
 }

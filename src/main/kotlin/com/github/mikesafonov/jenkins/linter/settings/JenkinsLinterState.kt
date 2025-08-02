@@ -22,9 +22,7 @@ class JenkinsLinterState : PersistentStateComponent<JenkinsLinterState> {
         fun getInstance() = ApplicationManager.getApplication().getService(JenkinsLinterState::class.java)!!
     }
 
-    override fun getState(): JenkinsLinterState {
-        return this
-    }
+    override fun getState(): JenkinsLinterState = this
 
     override fun loadState(state: JenkinsLinterState) {
         XmlSerializerUtil.copyBean(state, this)

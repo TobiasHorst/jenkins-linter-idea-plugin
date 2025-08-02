@@ -72,7 +72,8 @@ class JenkinsLinterComponent {
 
     init {
         panel =
-            FormBuilder.createFormBuilder()
+            FormBuilder
+                .createFormBuilder()
                 .addLabeledComponent(JBLabel("Jenkins url (protocol://hostname:port):"), jenkinsUrlTextField, 1, false)
                 .addLabeledComponent(JBLabel("Trust self-signed:"), trustSelfSignedCheckbox, 1, false)
                 .addLabeledComponent(JBLabel("Ignore certificate:"), ignoreCertificateCheckbox, 1, false)

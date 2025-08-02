@@ -46,7 +46,8 @@ object HttpClientFactory {
                 SSLContextBuilder()
                     .loadTrustMaterial(
                         null,
-                    ) { _: Array<X509Certificate?>?, _: String? -> true }.build()
+                    ) { _: Array<X509Certificate?>?, _: String? -> true }
+                    .build()
             clientBuilder
                 .setSSLContext(sslContext)
                 .setSSLHostnameVerifier(NoopHostnameVerifier())
