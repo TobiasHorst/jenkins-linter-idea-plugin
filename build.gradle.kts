@@ -10,7 +10,7 @@ plugins {
     id("org.jetbrains.intellij.platform") version "2.3.0"
     id("org.jetbrains.changelog") version "2.3.0"
     id("io.gitlab.arturbosch.detekt") version "1.23.8"
-    id("org.jlleitschuh.gradle.ktlint") version "12.1.2"
+    id("org.jlleitschuh.gradle.ktlint") version "13.0.0"
 }
 
 group = providers.gradleProperty("pluginGroup").get()
