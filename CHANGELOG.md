@@ -4,6 +4,17 @@
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.0.3] - 2025-08-03
 
 ### Changed
 
@@ -13,18 +24,6 @@
 - Update org.jetbrains.kotlin.jvm to version 2.2.0
 - Update io.gitlab.arturbosch.detekt:detekt-formatting to version 1.23.8
 - Update org.gradle.toolchains.foojay-resolver-convention to version 1.0.0
-
-### Deprecated
-
-
-### Removed
-
-
-### Fixed
-
-
-### Security
-
 
 ## [1.0.1] - 2024-12-12
 
@@ -53,6 +52,7 @@ Upgrade of plugin dependency versions and add new features of initial [Jenkins L
 - Update org.jlleitschuh.gradle.ktlint Gradle plugin
 - Update io.gitlab.arturbosch.detekt Gradle plugin
 
-[Unreleased]: https://github.com/TobiasHorst/jenkins-linter-idea-plugin/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/TobiasHorst/jenkins-linter-idea-plugin/compare/v1.0.3...HEAD
+[1.0.3]: https://github.com/TobiasHorst/jenkins-linter-idea-plugin/compare/v1.0.1...v1.0.3
 [1.0.1]: https://github.com/TobiasHorst/jenkins-linter-idea-plugin/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/TobiasHorst/jenkins-linter-idea-plugin/commits/v1.0.0
