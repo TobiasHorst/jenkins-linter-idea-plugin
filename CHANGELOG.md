@@ -5,6 +5,12 @@
 ### Added
 
 ### Changed
+- Update org.jlleitschuh.gradle.ktlint to version 13.0.0
+- Update org.jetbrains.intellij.platform to version 2.7.0
+- Update org.jetbrains.changelog to version 2.3.0
+- Update org.jetbrains.kotlin.jvm to version 2.2.0
+- Update io.gitlab.arturbosch.detekt:detekt-formatting to version 1.23.8
+- Update org.gradle.toolchains.foojay-resolver-convention to version 1.0.0
 
 ### Deprecated
 
