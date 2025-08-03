@@ -4,7 +4,9 @@
 
 ### Added
 
+
 ### Changed
+
 - Update org.jlleitschuh.gradle.ktlint to version 13.0.0
 - Update org.jetbrains.intellij.platform to version 2.7.0
 - Update org.jetbrains.changelog to version 2.3.0
@@ -14,11 +16,15 @@
 
 ### Deprecated
 
+
 ### Removed
+
 
 ### Fixed
 
+
 ### Security
+
 
 ## [1.0.1] - 2024-12-12
 
