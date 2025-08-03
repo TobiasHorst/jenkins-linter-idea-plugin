@@ -38,6 +38,8 @@ jobs:
     name: Update Changelog
     needs: release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
 
       # Setup Java 17 environment for the next steps
